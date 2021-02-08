@@ -38,3 +38,7 @@ You will have to fill your username and password reddit account in the .env
 ```
 npm run prod
 ```
+
+# Command
+
+lab_path_bot set_channel_output <channel_name>
