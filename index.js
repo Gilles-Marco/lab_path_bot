@@ -15,7 +15,8 @@ const reddit_client = new reddit.RedditClient(
 );
 
 //Use to let the discord server configure how the bot interact with them
-const guildConfig = new guildManager.GuildManager()
+const guildStorageFile = (process.env.CONFIG_GUILD_FILE == "") ? 'storage.json' : process.env.CONFIG_GUILD_FILE
+const guildConfig = new guildManager.GuildManager(guildStorageFile)
 
 //Handler to manager how to treat posts from /r/Lab_path
 let labpath_ids = []
