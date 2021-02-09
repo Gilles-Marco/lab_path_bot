@@ -87,8 +87,8 @@ client.on('message', (msg)=>{
         else{
             switch(tokens[1]){
                 case "set_channel_output":
-                    guildConfig.setDefaultChannelOutput(msg.guild.id, tokens[3])
-                    msg.reply(`Discord Server "${msg.guild.name}" identified by the id ${msg.guild.id} default channel output set to ${tokens[3]}`)
+                    guildConfig.setDefaultChannelOutput(msg.guild.id, tokens[2])
+                    msg.reply(`Discord Server "${msg.guild.name}" identified by the id ${msg.guild.id} default channel output set to ${tokens[2]}`)
                     break
                 default:
                     msg.reply(`Unknow command\n${helpers_command()}`)
