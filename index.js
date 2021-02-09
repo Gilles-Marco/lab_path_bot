@@ -27,9 +27,9 @@ function lab_path_handler(posts){
     })
 
     //Determine if the posts is new or had not been already treated
-    let now = new Date()
+    let yesterday = moment().subtract(1, 'd')
     posts.forEach((post)=>{
-        if(moment.duration(now - post.creationDate).days() < 1 && !labpath_ids.includes(post.id)){
+        if(!moment(post.creationDate).isBefore(yesterday) && !labpath_ids.includes(post.id)){
             labpath_ids.push(post.id)
             let message = new Discord.MessageEmbed()
                 .setTitle(post.title)

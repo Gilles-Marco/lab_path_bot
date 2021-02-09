@@ -3,8 +3,9 @@ const snoowrap = require('snoowrap');
 exports.RedditClient = class {
 
     constructor(username, password, clientId, secret){
-        // this.INTERVAL = 1000
-        this.INTERVAL = 60000
+        // this.INTERVAL = 1000 //1sec
+        // this.INTERVAL = 60000 //1min
+        this.INTERVAL = 300000 //5min
         this.subreddit = []
         this.queue = []
         this.instance = new snoowrap({
