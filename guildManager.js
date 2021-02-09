@@ -35,8 +35,10 @@ exports.GuildManager = class {
     }
 
     readConfig(){
-        if(this.isStorageExist())
+        if(this.isStorageExist()){
             this.config = JSON.parse(fs.readFileSync(this.STORAGE_FILE_NAME))
+            console.log('GUILD_MANAGER: Storage file found and loaded')
+        }
         else
             this.config = {}
     }
