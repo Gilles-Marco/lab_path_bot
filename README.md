@@ -1,3 +1,7 @@
+# Description
+
+Bot to check subreddit "afkarena" to detect post about the new labyrinth and post it to a discord server.
+
 # If you want to invite the bot on your server click here
 
 https://discord.com/api/oauth2/authorize?client_id=808310059222302740&permissions=257024&scope=bot
